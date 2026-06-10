@@ -68,7 +68,11 @@ No folder to create, but keep the same numbered structure inside your knowledge 
 31-reference     Preferences, decisions, conventions.
 ```
 
-> **Findability matters most as the memory grows.** Keep a short "index" at the top of long notes (a list of what's inside) so you and ChatGPT can navigate fast. Re-upload files when they change; keep the uploaded set lean so context loads quickly.
+> **Findability matters most as the memory grows.** Keep a short "index" at the top of long notes (a list of what's inside) so you and ChatGPT can navigate fast.
+>
+> **Keep the uploaded set small.** Knowledge files load into *every* chat in the Project, so each extra file costs you on every conversation. Most people only need two uploaded: the **about-me** and a small **"latest" journal digest** (Step 6). Everything else stays in your own notes, and you paste in the relevant bit when a conversation actually needs it.
+>
+> **Archive what's done.** When a list (reminders, projects, ideas) grows, move finished or stale items into an archive note instead of letting the live list bloat — smaller notes are easier to scan, for you and for ChatGPT.
 
 ---
 
@@ -87,10 +91,16 @@ The ChatGPT equivalent of a boot file. Goes in **Project instructions** (gear ic
 You are [AGENT], my personal assistant. Personality: [chosen personality].
 I use this for: [work / personal / both].
 
-## At the start of a conversation
+## At the start of a conversation — lazy by default
 - Greet briefly, then get to the point.
-- If I ask "what should I focus on," check the project knowledge and surface
-  1–2 things, not a long list.
+- Read the "latest" journal digest (the small digest file in project knowledge,
+  not the full journal archive) for recent context.
+- Check any uploaded reminders file for items due today.
+- Don't sweep all knowledge files at boot — load other notes only when the
+  conversation actually needs them. This keeps every session fast and cheap.
+- If I say "full boot," read everything (about-me, digest, active project notes)
+  and surface what's worth my attention.
+- If I ask "what should I focus on," surface 1–2 things, not a long list.
 
 ## Working agreement
 - Keep answers short by default. Only go long when I ask for detail.
@@ -135,6 +145,8 @@ friction I actually hit, not a schedule or a guess about how technical I am.
 [Anything off-limits, hours not to be nudged, topics to avoid.]
 ```
 
+> **Keep these instructions rules-only.** Over time it's tempting to let history pile up in here — old decisions, things you tried, the story of how a problem got fixed. Move all of that to a `31-reference` note and mention where it lives; the instructions get read on every single chat, so every extra paragraph costs you, every time.
+
 > **ChatGPT:** generate the filled-in version, then tell them exactly where to paste it (Project gear → Instructions, or Custom GPT Instructions). Drop the journal mention if they declined.
 
 ---
@@ -174,7 +186,7 @@ The most valuable piece. Create `02-about-me` and upload it as a knowledge file.
 
 ## Step 6 — Journal format (the working memory)
 
-A journal doubles as a token-saver: context lives in the file, so you can start fresh chats without losing your place. Keep a `32-journal` document and upload it periodically.
+A journal doubles as a token-saver: context lives in the file, so you can start fresh chats without losing your place. Keep a `32-journal` document on your computer — you'll upload a small digest of it, not the whole thing (see below).
 
 **Each day has two voices — your take and the assistant's take:**
 
@@ -197,7 +209,9 @@ A journal doubles as a token-saver: context lives in the file, so you can start 
 
 > "If you ever want to capture something in your own words, say 'journal this' and I'll write it under **My notes**. Otherwise I'll summarize what we work on, in short and in detail, so we keep a working memory. You can delete any of it anytime."
 
-Since ChatGPT can't write to your files, it drafts the entry for you to paste into your journal doc, then you re-upload periodically so it stays current.
+Since ChatGPT can't write to your files, it drafts the entry for you to paste into your journal doc.
+
+**Upload a small "latest" digest — not the whole journal.** If you've been re-uploading a big journal file, replace that habit with this one: keep a tiny second document holding just the **last ~5 days**, each day capped at **2 sentences plus one line of open items**. That digest is the knowledge file you upload and refresh — small file, quick to re-upload, cheap to load, so you'll actually keep it current. The full journal stays on your computer as the archive; the digest is the working memory your assistant reads at the start of every chat.
 
 ---
 
@@ -296,4 +310,4 @@ Say "**I want to level up**" anytime and [AGENT] will walk you up the next rung,
 > - [ ] Picked a model (most capable for the main assistant).
 > - [ ] Decided on any optional upgrades.
 >
-> Then leave them with the habit: **keep the about-me current and re-upload it, and let it summarize chats into your notes.** The uploaded knowledge is the memory — the fresher you keep it, the more useful the assistant gets.
+> Then leave them with the habit: **keep the about-me and the small "latest" digest current and re-upload them, and let it summarize chats into your notes.** The uploaded knowledge is the memory — the fresher (and smaller) you keep it, the more useful the assistant gets.

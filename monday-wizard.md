@@ -56,6 +56,7 @@ Create a **Workspace** (e.g., "My Assistant"). Inside it, create boards and Docs
 - **Number the board names** (e.g., "22-Projects") so they sort consistently in the sidebar — Monday's version of fixed addresses.
 - **Findability matters most as the memory grows.** Use board **Views** (filtered/grouped) and keep a short workspace overview so you and Sidekick can find things fast. This is the #1 thing that keeps a growing system from feeling like a mess.
 - **Add a "Work / Personal" column** to the Projects (and Ideas) board if you'll use this for both — it powers the audience filtering in Step 3.
+- **Archive what's done.** When a board grows, move finished or stale items into a "Done / Archive" group (or use Monday's built-in archive) instead of letting the live board bloat. Smaller live boards are faster to scan — for you and for Sidekick.
 
 ---
 
@@ -75,6 +76,10 @@ This workspace is used for: [work / personal / both].
 - Check 00-Inbox for anything unsorted.
 - Check 20-Reminders for items due today.
 - Glance at 22-Projects for what's active.
+- Read the "Latest" journal digest (Step 5) for recent context — not the full
+  journal history.
+- Don't sweep every board at a greeting — pull other boards in only when the
+  conversation needs them.
 - Surface 1–2 things worth my attention — not a giant list.
 
 ## Working agreement
@@ -111,7 +116,9 @@ When unsure of the audience, ask before mixing.
 - Don't invent data — if something isn't on a board, ask me.
 ```
 
-**How to "invoke" it:** open Sidekick and say *"Use my [AGENT] Operating Manual in this workspace as your guide,"* then point it at the Doc. Sidekick doesn't persist this across sessions, so re-point it when you start fresh. (The custom Agent in Step 7 *can* hold it permanently.)
+**How to "invoke" it:** open Sidekick and say *"Use my [AGENT] Operating Manual in this workspace as your guide,"* then point it at the Doc. Sidekick doesn't persist this across sessions, so re-point it when you start fresh. (The custom Agent in Step 7 *can* hold it permanently.) That Doc plus the "Latest" journal digest (Step 5) is all Sidekick needs to start a session — keep the opening light and pull in other boards only as the conversation calls for them.
+
+> **Keep the manual rules-only.** Over time it's tempting to let history pile up in here — old decisions, things you tried, the story of how a problem got fixed. Move all of that to your `31-Reference` Doc and link it from the manual. The manual gets read at the start of every session, so every extra paragraph costs you, every time.
 
 ---
 
@@ -158,6 +165,8 @@ Point Sidekick at it when you want it to act in your voice: *"Read my 02-About M
 ```
 
 Have Sidekick offer: *"Want me to capture this in your own words, or should I just summarize what we did? You can delete any of it later."* Append new days at the bottom.
+
+**Keep a small "Latest" digest so Sidekick never reads the whole journal.** Alongside the full `32-Journal`, keep a tiny Doc (e.g., `32-Journal — Latest`) — or a board view filtered to recent items — holding just the **last ~5 days**, each day capped at **2 sentences plus one line of open items**. At the start of a session, point Sidekick at *that*, not the full history. The full journal is the archive; the Latest digest is the working memory — small, fast, and cheap to read every day.
 
 **Reminders (where Monday beats a notes folder).**
 1. On **20-Reminders**, add a **Date** column and a **Status** column (Open/Done).

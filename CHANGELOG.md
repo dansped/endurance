@@ -2,6 +2,15 @@
 
 All notable changes to the Endurance wizards.
 
+## 2026-06-10
+
+- **Token & memory practices, all guides** (learned from a live vault overhaul):
+  - **Lazy boot** — the assistant reads the minimum at greeting (reminders + a digest) and loads everything else on demand; "full boot" on request. Cuts per-session start-up cost roughly in half.
+  - **Rolling journal digest** — a small "latest" file (last ~5 days, 2 sentences + open items each) is what the assistant reads at start-up; full month files become archive. On ChatGPT this doubles as the small re-uploaded knowledge file; on monday.com it's a "Latest" Doc or filtered view.
+  - **Rules-only operating manual** — history and old diagnoses move to a linked reference note; the boot file/manual stays lean because it loads every session.
+  - **Findability & pruning** — `[[wikilink]]` + `Related:` footer habits so notes stay discoverable, and archive-don't-bloat for backlogs and lists.
+- Master guide: added "Boot light, load on demand" to the traveling best practices; digest folded into the journal practice.
+
 ## 2026-06-05
 
 - **Named the method "Endurance"** and added this hub + changelog.

@@ -116,7 +116,7 @@ This is the heart of the system: a single file at the top of the folder that tel
 
 This is the boot file for [AGENT], my personal assistant.
 This vault is used for: [work / personal / both].
-*Endurance version: 2026-06-05*
+*Endurance version: 2026-06-10*
 
 When I greet [AGENT] (e.g., "Hello [AGENT]"), it should:
 
@@ -128,11 +128,16 @@ mistake — if you can't see this boot file, you're in the wrong place. Ask
 me to connect the right folder before reading or writing anything. (Writing
 notes into the wrong folder quietly corrupts the memory — this prevents that.)
 
-## 2. Read for context
-- 02-about-me/about-me.md — who I am, how I work, my preferences.
-- The latest entry in 32-journal/ — what we did most recently.
-- 20-routines/reminders.md — anything due today.
-- Any project notes in 22-projects/ relevant to what's coming up.
+## 2. Read for context — lazy by default
+Read as little as possible at boot; load the rest the moment it's needed:
+- ALWAYS: 20-routines/reminders.md — surface anything due today.
+- ALWAYS: 32-journal/latest.md — the rolling 5-day digest (see journal
+  protocol). Never read full month files at boot — only when I ask about
+  a specific past day.
+- ON DEMAND (load silently when the conversation touches them): about-me,
+  project notes, reference files.
+- If I say "full boot," read everything — about-me, active project notes,
+  the digest — then surface what's worth my attention.
 
 ## 3. Greet briefly
 [Their preferred greeting — short hello, then get to the point.]
@@ -170,8 +175,11 @@ When unsure who the audience is, ask before including mixed content.
 
 ## 8. Journal protocol  [include only if they want journaling]
 See the journal format in my notes. At the end of a session, write the
-day's entry (summary + detail). I can also ask you to capture something
-in my own words mid-session. (Details in Step 6 of the setup.)
+day's entry (summary + detail) AND update 32-journal/latest.md — the
+rolling digest of the last 5 days, each capped at 2 sentences + 1 line
+of open items. The digest is what you read at boot; keep it tight.
+I can also ask you to capture something in my own words mid-session.
+(Details in Step 6 of the setup.)
 
 ## 9. Reminder protocol  [include only if they want reminders]
 Reminders live in 20-routines/reminders.md. At the start of a session,
@@ -227,6 +235,9 @@ https://raw.githubusercontent.com/dansped/endurance/main/VERSION
 ## Boundaries
 - Stay inside this folder. Don't reference files elsewhere on my computer.
 - Don't invent contents of notes you can't see — ask me to share them.
+- Keep this boot file rules-only — when a section accumulates history or
+  old diagnoses, move that to a reference note and link it. (A bloated
+  boot file costs tokens on every single session.)
 ```
 
 > **Claude:** generate the filled-in version from their answers. Drop sections they declined (journal, reminders). Keep the safety, work/personal, short-answers, long-chat, and model sections unless they opt out. **Keep the `Endurance version` stamp and the update-check (§13) verbatim — they power the self-update feature; do not personalize or remove them.** Save as `[AGENT].md` at the top of their folder, or hand them the text.
@@ -323,6 +334,11 @@ The journal is both a record *and* a token-saver: because the context lives in a
 - New days go at the **bottom** of the month file (oldest at top).
 - Write the entry at end of session, or when the person says "journal this" / "log this."
 - Keep it concise — bullets and short thoughts.
+- **Also maintain `32-journal/latest.md`** — a rolling digest of the last 5 days, each capped at 2 sentences + 1 line of open items. Add today, drop the oldest. This is what the boot reads (month files are history, the digest is memory — it keeps every session's start cheap no matter how big the journal grows).
+
+**Findability habits (set these up now — they're why the memory stays usable):**
+- Link notes to each other with `[[wikilinks]]`; end any substantive note with a one-line `Related:` footer pointing to its parent folder's index and 1–2 sibling notes. A note with no links is invisible memory — the assistant can only find it by expensive searching.
+- When a backlog or list file grows, prune: move finished/stale items to an archive file rather than letting live files bloat.
 
 > **Claude:** create this month's journal file with the format above (or hand it over). Make sure the boot file's journal section points here.
 
